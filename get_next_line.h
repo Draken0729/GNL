@@ -5,25 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qbaret <qbaret@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 13:31:47 by qbaret            #+#    #+#             */
-/*   Updated: 2024/11/26 16:41:08 by qbaret           ###   ########.fr       */
+/*   Created: 2024/12/03 11:07:13 by qbaret            #+#    #+#             */
+/*   Updated: 2024/12/03 11:08:21 by qbaret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET
-# define GET
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1024
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
 
-char *get_next_line(int fd);
-int	ft_strcpy(char *dest, const char *src);
+char	*get_next_line(int fd);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strdup(const char *s);
+size_t	ft_strlen(const char *s);
+int		ft_strcpy(char *dest, const char *src);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 #endif
